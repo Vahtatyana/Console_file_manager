@@ -1,14 +1,12 @@
 import os
 import shutil
-import Vactory
-import Bank
 
 while True:
     print('1. создать папку')
     print('2. удалить (файл/папку)')
     print('3. копировать (файл/папку)')
     print('4. просмотр содержимого рабочей директории')
-    print('5. посмотреть только папкии')
+    print('5. посмотреть только папки')
     print('6. посмотреть только файлы')
     print('7. просмотр информации об операционной систем')
     print('8. создатель программы')
@@ -17,9 +15,7 @@ while True:
     print('11. смена рабочей директории')
     print('12. выход')
 
-
     choice = input('Выберите пункт меню: ')
-
     if choice == '1':
         name_dir = input('Введите имя папки:')
         if not os.path.exists(name_dir):
@@ -69,13 +65,12 @@ while True:
 
     elif choice == '8':
         print('Создатель программы: Вахрушева ТС')
-
-    elif choice == '9':
-        Vactory.game()
-
     elif choice == '10':
+        import Bank
         Bank.bill()
-
+    elif choice == '9':
+        import Vactory
+        Vactory.game()
     elif choice == '11':
         path = input('Введите новый путь:')
         os.chdir(path)

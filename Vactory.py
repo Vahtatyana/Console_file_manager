@@ -14,15 +14,15 @@ def game():
                      'Маршак': '03.11.1887', 'Перро': '12.01.1628',
                      'Михалков': '13.03.1913', 'Андерсон': '02.04.1805'}
     people = list(Birthdays.keys()) # Имена известных людей
-    print("Напишите даты рождения известных людей (dd.mm.YYYY)")
     import random
     five_people = random.sample(people , 5) # Случайным образом выбранные 5 имен из 10
     right_answers = 0 # Переменная, в которой будут накапливаться количество правильных ответов
     for i in five_people:
-        print(i)
+        input(f'Напишите дату рождения {i}: ')
         if input()==Birthdays[i]:
-            right_answers=right_answers+1 # переменная для подсчета количества правильных ответов
-        else:
+            right_answers=righ
+        t_answers+1 # переменная для подсчета количества правильных ответов
+    else:
             right_birthday = str(Birthdays[i]) # переменная для преобразования дня рождения в формат строки
             right_birthday_sep = right_birthday.split(".")# переменная для преобразования дня рождения в список, состоящий из дня, месяца и года
             right_day=right_birthday_sep[0] # день месяца
@@ -31,4 +31,3 @@ def game():
             print("Правильный ответ: ", days[right_day], months[right_month],right_year)
 
     print("У Вас ", right_answers,' правильных ответа. Попробуйте еще раз')
-game()

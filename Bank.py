@@ -29,7 +29,7 @@
 bill_sum = 0
 history = []
 
-def bill (bill_sum):
+def bill(bill_sum):
     cost = int(input('Введите сумму покупки: '))
     if cost > bill_sum:
         print('Недостаточно средств!')
@@ -51,7 +51,7 @@ while True:
         sum = int(input('Введите сумму на счете: '))
         bill_sum += sum
     elif choice == '2':
-        bill_sum = buy(bill_sum)
+        bill_sum = bill(bill_sum)
     elif choice == '3':
         print(f'Ваша история покупок: {history}')
     elif choice == '4':
